@@ -6,7 +6,7 @@ from watchdog.events import FileSystemEventHandler
 import requests
 from picamera import PiCamera
 from time import sleep       
-from datetime import datetime
+import uuid
 
 class Target:
     watchDir = '/home/admin/AIimage/image'
@@ -26,7 +26,7 @@ class Target:
             camera.start_preview()
             for i in ranage(6): 
                 time.sleep(2)                      
-                camera.capture(f'/home/admin/AIimage/image/{now.time()}.jpg')
+                camera.capture(f'/home/admin/AIimage/image/{uuid.uuid1()}.jpg')
                 print("er1")
                 
             camera.stop_preview() 
