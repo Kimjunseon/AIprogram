@@ -6,6 +6,7 @@ from watchdog.events import FileSystemEventHandler
 import requests
 from picamera import PiCamera
 from time import sleep       
+from datetime import datetime
 
 class Target:
     watchDir = '/home/admin/AIimage/image'
@@ -19,10 +20,14 @@ class Target:
         self.observer.start()
            
         try:
-            camera = PiCamera()          
-            camera.start_preview()        
-            sleep(5)                      
-            camera.capture('/home/admin/AIimage/image/ris.jpg')
+            camera = PiCamera()
+            camera.resolution = (800, 600)
+            camera.framerate = 15          
+            camera.start_preview()
+            for 1 in ranage(6) 
+                sleep(2)                      
+                camera.capture(f'/home/admin/AIimage/image/{now.time()}.jpg')
+                
             camera.stop_preview() 
             while True:
                 time.sleep(1)
