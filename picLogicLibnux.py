@@ -24,7 +24,7 @@ class Target:
             camera.resolution = (600, 600)
             camera.framerate = 15          
             camera.start_preview()
-            for i in ranage(6): 
+            for i in range(6): 
                 time.sleep(2)                      
                 camera.capture(f'/home/admin/AIimage/image/{uuid.uuid1()}.jpg')
                 print("er1")
