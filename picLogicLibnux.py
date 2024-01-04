@@ -19,7 +19,7 @@ class Target:
         self.observer.start()
            
         try:
-            \camera = PiCamera()          
+            camera = PiCamera()          
             camera.start_preview()        
             sleep(5)                      
             camera.capture('/home/admin/AIimage/image/ris.jpg')
