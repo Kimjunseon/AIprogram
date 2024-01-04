@@ -24,7 +24,7 @@ class Target:
             camera.resolution = (800, 600)
             camera.framerate = 15          
             camera.start_preview()
-            for i in ranage(6) 
+            for i in ranage(6): 
                 sleep(2)                      
                 camera.capture(f'/home/admin/AIimage/image/{now.time()}.jpg')
                 
