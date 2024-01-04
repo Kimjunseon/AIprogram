@@ -44,7 +44,7 @@ class Handler(FileSystemEventHandler):
         transprot.connect(username = userId, password = password)
         sftp = paramiko.SFTPClient.from_transport(transprot)
         
-        localpath = f"C:/Users/scadaict/Desktop/sub/{file_name}"
+        localpath = f"/home/admin/AIimage/image/{file_name}"
         remotepath = f"C:/Users/khson/Desktop/images/{file_name}"
 
         sftp.put(localpath, remotepath)
