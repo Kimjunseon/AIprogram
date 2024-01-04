@@ -37,12 +37,11 @@ class Target:
                 }
                 response = requests.post(url, data=form_data)
                 if response.status_code == 200:
-                print('success')
-                print('respone:', response.text)
-                
+                    print('success')
+                    print('respone:', response.text)
                 else:
-                print('fail:', response.status_code)
-                print('respone:', response.text)
+                    print('fail:', response.status_code)
+                    print('respone:', response.text)
                
             camera.stop_preview()
             while True:
