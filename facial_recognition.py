@@ -27,8 +27,7 @@ class Target:
             for i in range(6): 
                 time.sleep(2)                      
                 camera.capture(f'/home/admin/AIimage/image/{uuid.uuid1()}.jpg')
-                print("er1")
-                
+
             camera.stop_preview() 
             while True:
                 time.sleep(1)
