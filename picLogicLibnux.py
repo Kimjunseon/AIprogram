@@ -27,6 +27,7 @@ class Target:
             for i in ranage(6): 
                 time.sleep(2)                      
                 camera.capture(f'/home/admin/AIimage/image/{now.time()}.jpg')
+                print("er1")
                 
             camera.stop_preview() 
             while True:
