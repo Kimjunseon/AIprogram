@@ -7,7 +7,6 @@ import requests
 from picamera import PiCamera
 from time import sleep       
 
-
 class Target:
     watchDir = '/home/admin/AIimage/image'
 
@@ -20,6 +19,11 @@ class Target:
         self.observer.start()
            
         try:
+            \camera = PiCamera()          
+            camera.start_preview()        
+            sleep(5)                      
+            camera.capture('/home/admin/AIimage/image/ris.jpg')
+            camera.stop_preview() 
             while True:
                 time.sleep(1)
         except:
@@ -54,10 +58,6 @@ if __name__ == '__main__':
     w = Target()
     w.run()
     
-camera = PiCamera()           
-camera.start_preview()        
-sleep(5)                      
-camera.capture('/home/admin/AIimage/image/ris.jpg')
-camera.stop_preview() 
+
 
 
