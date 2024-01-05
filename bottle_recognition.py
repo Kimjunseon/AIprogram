@@ -32,7 +32,7 @@ class Target:
                 form_data = {
                     'trainid': 'onnx',
                     'device_name': 'cpu',
-                    'imagePath': 'C:\Users\khson\Desktop\new\sampleimage'
+                    'imagePath': 'C:/Users/khson/Desktop/new/sampleimage'
                 }
                 response = requests.get(url, params=form_data)
                 if response.status_code == 200:
