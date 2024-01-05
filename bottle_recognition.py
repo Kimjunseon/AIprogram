@@ -21,7 +21,7 @@ class Target:
            
         try:
             url = "http://192.168.0.35:45226/prediction"
-            response = requests.get(url)
+            response = requests.get(url, params=form_data)
             camera = PiCamera()
             camera.resolution = (600, 600)
             camera.framerate = 15          
