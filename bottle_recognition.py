@@ -21,7 +21,6 @@ class Target:
            
         try:
             url = "http://192.168.0.35:45226/prediction"
-            response = requests.get(url, params=form_data)
             camera = PiCamera()
             camera.resolution = (600, 600)
             camera.framerate = 15          
@@ -35,7 +34,7 @@ class Target:
                     'device_name': 'cpu',
                     'imagePath': 'C:/Users/khson/Desktop/new/sampleimage'
                 }
-                response = requests.post(url, data=form_data)
+                response = requests.get(url, params=form_data)
                 if response.status_code == 200:
                     print('success')
                     print('respone:', response.text)
