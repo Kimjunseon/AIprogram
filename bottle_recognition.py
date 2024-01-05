@@ -20,6 +20,8 @@ class Target:
         self.observer.start()
            
         try:
+            url = "http://192.168.0.35:45226/prediction"
+            response = requests.get(url)
             camera = PiCamera()
             camera.resolution = (600, 600)
             camera.framerate = 15          
@@ -28,12 +30,10 @@ class Target:
                 random_name = uuid.uuid1()
                 time.sleep(2)                      
                 camera.capture(f'/home/admin/AIimage/image/{random_name}.jpg')        
-                url = "http://192.168.0.35:45226/prediction"
                 form_data = {
-                    'pic1': {random_name},
                     'trainid': 'onnx',
-                    'device_name': 'cuda',
-                    'imagePath': 'C:/Users/khson/Desktop/images'
+                    'device_name': 'cpu',
+                    'imagePath': 'C:/Users/khson/Desktop/new/sampleimage'
                 }
                 response = requests.post(url, data=form_data)
                 if response.status_code == 200:
@@ -78,6 +78,3 @@ if __name__ == '__main__':
     w = Target()
     w.run()
     
-
-
-
