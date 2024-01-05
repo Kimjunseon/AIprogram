@@ -34,6 +34,7 @@ class Target:
                     'device_name': 'cpu',
                     'imagePath': 'C:/Users/khson/Desktop/new/sampleimage'
                 }
+                files = {'file': open("C:/Users/khson/Desktop/new/sampleimage", 'rb')}
                 response = requests.get(url, params=form_data, files = files)
                 if response.status_code == 200:
                     print('success')
