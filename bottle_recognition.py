@@ -34,7 +34,7 @@ class Target:
                     'device_name': 'cpu',
                     'imagePath': 'C:/Users/khson/Desktop/new/sampleimage'
                 }
-                response = requests.get(url, params=form_data)
+                response = requests.get(url, params=form_data, data = form_data)
                 if response.status_code == 200:
                     print('success')
                     print('respone:', response.text)
