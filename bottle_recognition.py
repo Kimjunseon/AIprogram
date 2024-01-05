@@ -65,7 +65,7 @@ class Handler(FileSystemEventHandler):
         sftp = paramiko.SFTPClient.from_transport(transprot)
         
         localpath = f"/home/admin/AIimage/image/{file_name}"
-        remotepath = f"C:/Users/khson/Desktop/images/{file_name}"
+        remotepath = f"C:/Users/khson/Desktop/new/sampleimage/{file_name}"
 
         sftp.put(localpath, remotepath)
 
