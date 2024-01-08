@@ -3,10 +3,6 @@
 
 # In[ ]:
 
-
-pip install pymodbus
-
-
 # In[7]:
 
 
